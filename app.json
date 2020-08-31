@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "TuLaburo",
+    "slug": "tulaburoapp",
+    "description": "Producto Mínimo Viable de TuLaburo",
+    "privacy": "public",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "userInterfaceStyle": "automatic",
+      "bundleIdentifier": "com.tulaburo.app",
+      "infoPlist": {
+        "LSApplicationQueriesSchemes": [
+          "https"
+        ]
+      }
+    },
+    "android": {
+      "package": "com.tulaburo.app"
+    },
+    "facebookScheme": "fb1925213581044497",
+    "facebookAppId": "1925213581044497",
+    "facebookDisplayName": "TuLaburo"
+  }
+}
