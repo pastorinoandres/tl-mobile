@@ -1,0 +1,8 @@
+export { default as Header } from './Header'
+export { default as Terms } from './Terms'
+export { default as ProfileCard } from './ProfileCard'
+export { default as FormContainer} from './FormContainer'
+export { default as FormButtons } from './FormButtons'
+export { default as FormCard } from './FormCard'
+export { default as Tips } from './Tips'
+export { default as MenuPhotos } from './MenuPhotos'
