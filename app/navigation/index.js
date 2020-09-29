@@ -56,7 +56,7 @@ function ReactNavigationContainer() {
           
           >
 
-          <Tab.Screen 
+          {/*<Tab.Screen 
             name="Inicio" 
             component={Home}
             options={{
@@ -66,7 +66,7 @@ function ReactNavigationContainer() {
               ),
               tabBarVisible:true
             }} 
-          />
+          />*/}
           <Tab.Screen 
             name="Tienda" 
             component={Explore}

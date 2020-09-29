@@ -44,8 +44,8 @@ const ScrollList = ({scrollY,scrollView})=>{
   
         <View style={styles.spaceInitial}/>
         <Covid/>
-        <NuestrasSugerencias/>
-        <NuevosProyectos/>
+        {/*<NuestrasSugerencias/>
+        <NuevosProyectos/>*/}
         <TrabajadoresDelMes/>
         <Categorias/>     
         <View style={styles.space}/>
