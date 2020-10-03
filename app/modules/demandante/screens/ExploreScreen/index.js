@@ -59,7 +59,7 @@ const ExploreScreen = (props) => {
         <ScrollList {...{scrollY,scrollView}} /> 
         <Portada {...{scrollY}}/>
         <H1 {...{scrollY}}/>   
-        <SearchBox scrollY={scrollY}/>     
+        {/*<SearchBox scrollY={scrollY}/>*/}     
         <Header {...{scrollY,scrollView}}/>
         <HamburgerMenu style={styles.hamburgerMenu} animatedColor={colors.white(1)}/>
 
