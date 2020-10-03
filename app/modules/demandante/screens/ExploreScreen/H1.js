@@ -10,7 +10,8 @@ const { Extrapolate, interpolate } = Animated;
 
 const H1 = ({scrollY})=>{
 
-    const TOP_SEARCH_BOX = 240
+    // TODO: back to -> const TOP_SEARCH_BOX = 240
+    const TOP_SEARCH_BOX = 300
     const TOP_H1 = TOP_SEARCH_BOX -50 
   
     const topH1 = interpolate(scrollY, {  
