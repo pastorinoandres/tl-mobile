@@ -42,7 +42,7 @@ const ContactsCard = ({contact}) =>{
                         <Thumbnail source={contact.photo} size={50} />
                         <View style={{position:'absolute', width:16, height:16, borderRadius:8, bottom:0, right:15, backgroundColor:contact.state?colors.correcto.primary:colors.neutral.primary, borderColor:colors.white(1), borderWidth:2}}/>
                     </View>
-                    <View style={{flex: 1, flexDirection: 'column', alignItems: 'left', justifyContent: 'center', backgroundColor: 'transparent'}}>
+                    <View style={{flex: 1, flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', backgroundColor: 'transparent'}}>
                         <Text {...typography["body-strong-18"]} color={colors.grey.t80} extraStyles={{textAlign:'left', marginBottom: ui.padding*0.3}} >{contact.name}</Text>
                         <Text {...typography["body-16 "]} color={colors.grey.t80} extraStyles={{textAlign:'left'}} >{contact.skill}</Text>
                     </View>

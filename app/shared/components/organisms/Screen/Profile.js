@@ -38,7 +38,7 @@ const Profile = (props)=>{
         <View style={{width: 0.20 * windowWidth, justifyContent: 'center', alignItems: 'flex-end' }}>
           <Thumbnail source={{uri: photoURL}} size={56} extraStyles={{...ui.shadow,}} />
         </View>
-        <View style={{flex: 1, flexDirection: 'column', alignItems: 'left', justifyContent: 'center', paddingLeft:0.05* windowWidth}}>
+        <View style={{flex: 1, flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', paddingLeft:0.05* windowWidth}}>
           <Text {...typography["title-20"]} color={colors.white()} >{`${ displayName }`}</Text>
           <Text {...typography["body-16"]} color={colors.white()} >Ver mi perfil</Text>
         </View>

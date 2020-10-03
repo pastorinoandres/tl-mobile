@@ -195,7 +195,7 @@ const Notifications = ({setHeightTitle, anchor, setAnchor, scrollY, translationX
                 <View style={{paddingHorizontal: ui.padding, justifyContent: 'center', alignItems: 'center' }}>
                   <Thumbnail source={Option.Icon} size={44} />
                 </View>
-                <View style={{flex: 1, flexDirection: 'column', alignItems: 'left', justifyContent: 'center', backgroundColor: 'transparent'}}>
+                <View style={{flex: 1, flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', backgroundColor: 'transparent'}}>
                   <Text {...typography["body-strong-18"]} color={colors.grey.t80} extraStyles={{textAlign:'left', marginBottom: ui.padding*0.3}} >{Option.title}</Text>
                   <Text {...typography["body-16 "]} color={colors.grey.t80} extraStyles={{textAlign:'left'}} >{Option.message}</Text>
                 </View>

@@ -162,7 +162,7 @@ const MainHeader = ({scrollY,navigate,scrollView})=>{
       paddingTop:insets.top + ui.margin,
       paddingBottom:ui.margin,
       backgroundColor:'transparent', 
-      alignItems: 'left', 
+      alignItems: 'flex-start', 
       justifyContent:'flex-end',
       paddingHorizontal:ui.padding,
       position:'absolute',
