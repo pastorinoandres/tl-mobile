@@ -16,7 +16,12 @@ import {
   EmailConfirmation,
   UpdateEmail,
 } from "../modules/auth/screens";
-import { Home, Explore, Contacts } from "../modules/demandante/screens";
+import {
+  Home,
+  Explore,
+  Contacts,
+  Profile,
+} from "../modules/demandante/screens";
 
 //selectors
 import { getIsAuthenticated } from "../state/ducks/user/userSelectors";
@@ -30,6 +35,8 @@ import {
   UPDATE_EMAIL,
   EXPLORE,
   CONTACTS,
+  CATEGORY_PREVIEW,
+  PROFILE,
 } from "./constants";
 
 import TabBar from "./TabBar";
@@ -43,6 +50,16 @@ import { View } from "react-native";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+
+function ExploreStack() {
+  return (
+    <Stack.Navigator headerMode="none">
+      <Stack.Screen name={EXPLORE} component={Explore} />
+      <Stack.Screen name={CATEGORY_PREVIEW} component={Profile} />
+      <Stack.Screen name={PROFILE} component={Profile} />
+    </Stack.Navigator>
+  );
+}
 
 function ReactNavigationContainer() {
   const isAuthenticated = useSelector(getIsAuthenticated);
@@ -70,7 +87,7 @@ function ReactNavigationContainer() {
           />*/}
           <Tab.Screen
             name={EXPLORE}
-            component={Explore}
+            component={ExploreStack}
             options={{
               tabBarLabel: "Tienda",
               tabBarIcon: ({ color, size }) => (
