@@ -8,7 +8,7 @@ import {
   calculateSize,
 } from "../../../../shared/styles";
 import { useNavigation } from "@react-navigation/native";
-import { EXPLORE } from "../../../../navigation/constants";
+import { CATEGORY_PREVIEW } from "../../../../navigation/constants";
 
 const Categorias = () => {
   const navigation = useNavigation();
@@ -129,7 +129,7 @@ const Categorias = () => {
   };
 
   const openCategory = (category) => {
-    return () => navigation.navigate(EXPLORE, category);
+    return () => navigation.navigate(CATEGORY_PREVIEW, category);
   };
 
   return (

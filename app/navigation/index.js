@@ -21,6 +21,7 @@ import {
   Explore,
   Contacts,
   Profile,
+  CategoryPreview,
 } from "../modules/demandante/screens";
 
 //selectors
@@ -55,7 +56,7 @@ function ExploreStack() {
   return (
     <Stack.Navigator headerMode="none">
       <Stack.Screen name={EXPLORE} component={Explore} />
-      <Stack.Screen name={CATEGORY_PREVIEW} component={Profile} />
+      <Stack.Screen name={CATEGORY_PREVIEW} component={CategoryPreview} />
       <Stack.Screen name={PROFILE} component={Profile} />
     </Stack.Navigator>
   );
