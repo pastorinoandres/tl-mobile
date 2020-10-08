@@ -91,7 +91,7 @@ const TrabajadoresDelMes = () => {
         color={colors.grey.t80}
         extraStyles={styles.title}
       >
-        Trabajadores del mes
+        Trabajadores destacados
       </Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         {trabajadores.map((item) => {

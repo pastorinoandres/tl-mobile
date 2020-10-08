@@ -35,15 +35,15 @@ const { width: windowWidth, height: windowHeight } = Dimensions.get("window");
 
 const tabIcons = [
   {
-    name: HOME,
+    name: "Inicio",
     icon: Home,
   },
   {
-    name: EXPLORE,
+    name: "Tienda",
     icon: Store,
   },
   {
-    name: CONTACTS,
+    name: "Agenda",
     icon: Contacts,
   },
 ];
@@ -103,9 +103,7 @@ export default function TabBar({ state, descriptors, navigation }) {
       <View style={{ flex: 1, flexDirection: "row" }}>
         {state.routes.map((route, index) => {
           const { options } = descriptors[route.key];
-
-          const label = route.name;
-
+          const label = options.tabBarLabel;
           const disabledColor = "#999999";
 
           const Icon = tabIcons.find((item) => item.name === label).icon;
