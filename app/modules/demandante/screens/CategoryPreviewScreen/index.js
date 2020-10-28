@@ -1,5 +1,5 @@
 import React, { useContext, useRef, useState, useEffect } from "react";
-import { View, Dimensions, Alert } from "react-native";
+import { View, Dimensions, Alert, StyleSheet } from "react-native";
 import { colors, ui, calculateSize, typography } from "../../../../shared/styles";
 import Text from "../../../../shared/components/atoms/Text";
 import { Screen } from "../../../../shared/components/organisms";
@@ -128,9 +128,9 @@ const CategoryPreviewScreen = (props) => {
   
   const insets = useSafeArea();
 
-  const styles = {
+  const styles = StyleSheet.create({
     container: {
-      flex: 1,
+      flex:1,
       width: "100%",
       justifyContent: "center",
       alignItems: "center",
@@ -138,6 +138,19 @@ const CategoryPreviewScreen = (props) => {
       paddingRight: '3%',
     },
     
+    header: {
+    //agregados mios!!!
+      flex:1,
+      backgroundColor:'red',
+      marginLeft: '5%',
+      marginTop: '-20%',
+      minHeight:'20%',
+    },
+    catTitle: {
+      textAlignVertical:'top',
+      
+    },
+    //******** estos ya estaban
     space: {
       height: 210,
       width: "100%",
@@ -159,7 +172,7 @@ const CategoryPreviewScreen = (props) => {
       textAlign: "left",
       marginBottom: ui.padding,
     },
-  };
+  });
 
   return (
     <>
@@ -172,8 +185,8 @@ const CategoryPreviewScreen = (props) => {
           scrollEventThrottle ={1}
           ref={scrollView}>
           <View style={styles.spaceInitial}/>
-          <View style={styles.mainContainer}>
-            <Text style={styles.catTitle}>{`${title}`} </Text>
+          <View style={styles.header}>
+            <Text extraStyles={styles.catTitle} {...typography['title-28']}> {`${title}`} </Text>
           </View>
           <View style={styles.mainContainer}>
               {contacts.recently.map((item, index)=>(<ContactsCard contact={item} key={`${item.name}->${index}`} />))}
