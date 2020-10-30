@@ -63,19 +63,19 @@ const CategoryPreviewScreen = (props) => {
     recently: [
       {
         name:'Nahuel Cristofoli',
-        skill:'Ingeniero Industrial',
+        //skill:'Ingeniero Industrial',
         photo:require("../../../../../assets/nahuel.jpg"),
         state:true
       },
       {
           name:'Mariano Busti',
-          skill:'Couch Emprendedor',
+         // skill:'Couch Emprendedor',
           photo:require("../../../../../assets/mariano.jpg"),
           state:false
       },
       {
           name:'Marcelo Ponti',
-          skill:'Diseñador Grafico',
+          //skill:'Diseñador Grafico',
           photo:require("../../../../../assets/marce.jpg"),
           state:true
       },
@@ -83,19 +83,19 @@ const CategoryPreviewScreen = (props) => {
     all:[
       {
         name:'Alejandro DiLuca',
-        skill:'Productor de cine',
+       // skill:'Productor de cine',
         photo:require("../../../../../assets/alejandro.jpg"),
         state:true
       },
       {
           name:'Nicolas Perazzo',
-          skill:'Economista',
+         // skill:'Economista',
           photo:require("../../../../../assets/nico.jpg"),
           state:false
       },
       {
           name:'Damian Grimberg',
-          skill:'Desarrollador',
+         // skill:'Desarrollador',
           photo:require("../../../../../assets/dami.jpg"),
           state:false
       },
