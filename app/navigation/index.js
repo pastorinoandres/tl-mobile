@@ -94,6 +94,7 @@ function ReactNavigationContainer() {
                 <StoreIcon size={size} color={color} />
               ),
               tabBarVisible: true,
+              gestureEnabled: false,
             }}
           />
           <Tab.Screen
@@ -105,6 +106,7 @@ function ReactNavigationContainer() {
                 <ContactsIcon size={size} color={color} />
               ),
               tabBarVisible: true,
+              gestureEnabled: false,
             }}
           />
         </Tab.Navigator>

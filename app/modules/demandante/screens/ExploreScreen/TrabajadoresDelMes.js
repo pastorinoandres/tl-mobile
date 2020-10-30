@@ -9,22 +9,23 @@ import {
 } from "../../../../shared/styles";
 import { useNavigation } from "../../../../hooks";
 import { PROFILE } from "../../../../navigation/constants";
+import { images } from "./../../../../utils/images";
 
 const TrabajadoresDelMes = () => {
   const navigation = useNavigation();
   const trabajadores = [
     {
-      image: require("../../../../../assets/trabajador1.png"),
+      image: images.trabajadores_a,
       name: "Juan",
       skill: "Albañil",
     },
     {
-      image: require("../../../../../assets/trabajador2.png"),
+      image: images.trabajadores_b,
       name: "Maria",
       skill: "Electricista",
     },
     {
-      image: require("../../../../../assets/trabajador3.png"),
+      image: images.trabajadores_c,
       name: "Sebastian",
       skill: "Herrero",
     },
