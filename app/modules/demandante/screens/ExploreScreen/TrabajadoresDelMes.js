@@ -9,24 +9,28 @@ import {
 } from "../../../../shared/styles";
 import { useNavigation } from "../../../../hooks";
 import { PROFILE } from "../../../../navigation/constants";
+import { images } from "./../../../../utils/images";
 
 const TrabajadoresDelMes = () => {
   const navigation = useNavigation();
   const trabajadores = [
     {
-      image: require("../../../../../assets/trabajador1.png"),
+      image: images.trabajadores_a,
       name: "Juan",
       skill: "Albañil",
+      aboutMe: "Soy albañil y me dedico a la construcción pesada.",
     },
     {
-      image: require("../../../../../assets/trabajador2.png"),
+      image: images.trabajadores_b,
       name: "Maria",
       skill: "Electricista",
+      aboutMe: "Me dedico a realizar instalaciones domiciliarias como comerciales.",
     },
     {
-      image: require("../../../../../assets/trabajador3.png"),
+      image: images.trabajadores_c,
       name: "Sebastian",
       skill: "Herrero",
+      aboutMe: "Realizo cualquier estructura de metálica usted necesite.",
     },
   ];
 

@@ -9,6 +9,7 @@ import {
 } from "../../../../shared/styles";
 import { useNavigation } from "@react-navigation/native";
 import { CATEGORY_PREVIEW } from "../../../../navigation/constants";
+import { images } from "./../../../../utils/images";
 
 const Categorias = () => {
   const navigation = useNavigation();
@@ -18,17 +19,17 @@ const Categorias = () => {
       name: "Servicios para el hogar",
       servicios: [
         {
-          image: require("../../../../../assets/categorias/jardinero.png"),
+          image: images.category_jardinero,
           title: "Jardineria",
           subtitle: "Deja tu parque reluciente",
         },
         {
-          image: require("../../../../../assets/categorias/cuidador.png"),
+          image: images.category_cuidador,
           title: "Cuidado de personas",
           subtitle: "Mayores, con capacidades diferentes",
         },
         {
-          image: require("../../../../../assets/categorias/limpieza.png"),
+          image: images.category_limpieza,
           title: "Limpieza",
           subtitle: "Deja tu casa brillando",
         },
@@ -38,32 +39,32 @@ const Categorias = () => {
       name: "Relacionados a la construción",
       servicios: [
         {
-          image: require("../../../../../assets/categorias/albanil.png"),
+          image: images.category_albanil,
           title: "Albañileria",
           subtitle: "Levanta paredes,...",
         },
         {
-          image: require("../../../../../assets/categorias/carpintero.png"),
+          image: images.category_carpintero,
           title: "Carpinteria",
           subtitle: "Puertas, muebles, marcos..",
         },
         {
-          image: require("../../../../../assets/categorias/electricista.png"),
+          image: images.category_electricista,
           title: "Electricista",
           subtitle: "Iluminación, cableados, motores",
         },
         {
-          image: require("../../../../../assets/categorias/herrero.png"),
+          image: images.category_herrero,
           title: "Herreria",
           subtitle: "Todo tipo de estructuras... ",
         },
         {
-          image: require("../../../../../assets/categorias/plomero.png"),
+          image: images.category_plomero,
           title: "Plomeria",
           subtitle: "Repara tus perdidas",
         },
         {
-          image: require("../../../../../assets/categorias/pintor.png"),
+          image: images.category_pintor,
           title: "Pintor",
           subtitle: "Deja tu casa como nueva",
         },
@@ -73,17 +74,17 @@ const Categorias = () => {
       name: "Explora otros servicios",
       servicios: [
         {
-          image: require("../../../../../assets/categorias/cerrajero.png"),
+          image: images.category_cerrajero,
           title: "Cerrajero",
           subtitle: "Olvidaste la llave? Aqui la solucíon",
         },
         {
-          image: require("../../../../../assets/categorias/fumigador.png"),
+          image: images.category_fumigador,
           title: "Fumigación",
           subtitle: "Olvidate de las plagas",
         },
         {
-          image: require("../../../../../assets/categorias/agrimensor.png"),
+          image: images.category_agrimensor,
           title: "Agrimensor",
           subtitle: "Encuentra todos los detalles ...",
         },
