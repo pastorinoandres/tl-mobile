@@ -1,3 +1,5 @@
+/*
+
 import React, { useContext, useRef, useState, useEffect } from "react";
 import {
   View,
@@ -19,6 +21,7 @@ import Animated, { Easing } from "react-native-reanimated";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Settings, ChangeMode } from "../../../../shared/vectors";
 import useActions from "../../../../hooks/useActions";
+
 
 //los que agregue yo
 import { LinearGradient } from "expo-linear-gradient";
@@ -144,3 +147,6 @@ const CategoryPreviewScreen = (props) => {
 };
 
 export default CategoryPreviewScreen;
+
+
+*/
