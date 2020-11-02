@@ -93,18 +93,21 @@ const ContactsScreen = (props) => {
         name: "Nahuel Cristofoli",
         skill: "Ingeniero Industrial",
         photo: images.user_nahuel,
+        aboutMe: "Soy Nahuel y me dedico a...",
         state: true,
       },
       {
         name: "Mariano Busti",
         skill: "Couch Emprendedor",
         photo: images.user_mariano,
+        aboutMe: "Soy Mariano y me dedico a...",
         state: false,
       },
       {
         name: "Marcelo Ponti",
         skill: "Diseñador Grafico",
         photo: images.user_marce,
+        aboutMe: "Soy Marcelo y me dedico a...",
         state: true,
       },
     ],
@@ -113,18 +116,21 @@ const ContactsScreen = (props) => {
         name: "Alejandro DiLuca",
         skill: "Productor de cine",
         photo: images.user_alejandro,
+        aboutMe: "Soy Alejandro y me dedico a...",
         state: true,
       },
       {
         name: "Nicolas Perazzo",
         skill: "Economista",
         photo: images.user_nico,
+        aboutMe: "Soy Nicolas y me dedico a...",
         state: false,
       },
       {
         name: "Damian Grimberg",
         skill: "Desarrollador",
         photo: images.user_dami,
+        aboutMe: "Soy Damian y me dedico a...",
         state: false,
       },
     ],
@@ -179,6 +185,7 @@ const ContactsScreen = (props) => {
     { useNativeDriver: true }
   );
 
+
   return (
     <Screen {...props} options={options} initialAnimation>
       <View style={styles.container}>
@@ -197,7 +204,8 @@ const ContactsScreen = (props) => {
               Con actividad reciente
             </Text>
             {contacts.recently.map((item, index) => (
-              <ContactsCard contact={item} key={`${item.name}->${index}`} />
+              <ContactsCard contact={item} key={`${item.name}->${index}`}
+            />
             ))}
           </View>
           <View style={styles.mainContainer}>

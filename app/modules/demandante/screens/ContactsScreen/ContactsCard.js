@@ -1,13 +1,14 @@
 import React from 'react'
-import { View, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { View, ScrollView, Image, TouchableOpacity, Alert } from 'react-native';
 import { Text, Thumbnail } from './../../../../shared/components/atoms';
 import { colors, typography, ui, calculateSize } from '../../../../shared/styles';
 import ArrowPush from './../../../../shared/vectors/arrowPush';
-
+import { PROFILE } from "../../../../navigation/constants";
+import { useNavigation } from "../../../../hooks";
 
 const ContactsCard = ({contact}) =>{
 
-
+    const navigation = useNavigation();
     const styles = {
 
         cardContainer:{
@@ -31,12 +32,17 @@ const ContactsCard = ({contact}) =>{
         },
 
     }
-    
+
+    const openProfile = (contact) => {
+        return () => {
+          navigation.navigate(PROFILE, contact);
+        };
+      };
 
     return(
 
         <View style={styles.cardContainer}>
-            <TouchableOpacity style={styles.touchable}>
+            <TouchableOpacity style={styles.touchable} onPress={openProfile(contact)}> 
                 <View style={styles.card}>
                     <View style={{paddingHorizontal: ui.padding, justifyContent: 'center', alignItems: 'center' }}>
                         <Thumbnail source={contact.photo} size={50} />
