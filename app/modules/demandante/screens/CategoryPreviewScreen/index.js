@@ -12,8 +12,8 @@
 // import {
 //   colors,
 //   ui,
-//   calculateSize,
-//   typography,
+//  calculateSize,
+// typography,
 // } from "../../../../shared/styles";
 // import Text from "../../../../shared/components/atoms/Text";
 // import { Screen } from "../../../../shared/components/organisms";
@@ -31,46 +31,7 @@
 
 // const CategoryPreviewScreen = (props) => {
 //   const contacts = {
-//     recently: [
-//       {
-//         name: "Nahuel Cristofoli",
-//         //skill:'Ingeniero Industrial',
-//         photo: images.user_andres,
-//         state: true,
-//       },
-//       {
-//         name: "Mariano Busti",
-//         // skill:'Couch Emprendedor',
-//         photo: images.user_mariano,
-//         state: false,
-//       },
-//       {
-//         name: "Marcelo Ponti",
-//         //skill:'Diseñador Grafico',
-//         photo: images.user_marce,
-//         state: true,
-//       },
-//     ],
-//     all: [
-//       {
-//         name: "Alejandro DiLuca",
-//         // skill:'Productor de cine',
-//         photo: images.user_alejandro,
-//         state: true,
-//       },
-//       {
-//         name: "Nicolas Perazzo",
-//         // skill:'Economista',
-//         photo: images.user_nico,
-//         state: false,
-//       },
-//       {
-//         name: "Damian Grimberg",
-//         // skill:'Desarrollador',
-//         photo: images.user_dami,
-//         state: false,
-//       },
-//     ],
+//     
 //   };
 
 //   const {
@@ -147,5 +108,32 @@
 // };
 
 // export default CategoryPreviewScreen;
+import React from "react";
+import { View, Image, ScrollView } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import ContactsCard from "../ContactsScreen/ContactsCard";
+import { colors, typography, } from "../../../../shared/styles";
+import categoriasStyles from "./styles";
+import users from "../../../../mocks/users";
 
+const CategoryPreviewScreen = (props) => {
+  const { image, title, subtitle } = props.route.params
+  {console.log({...users})};
+  return (
+    <View style={...categoriasStyles.container}>
+      <ScrollView scrollEventThrottle={1}>
+        <View style={...categoriasStyles.spaceInitial}>
+          <Image source={image} style={...categoriasStyles.catImag}/>
+          <LinearGradient style={...categoriasStyles.degradado} {...colors.greyGradient} />
+          <Text extraStyles={...categoriasStyles.catTitle} {...typography["title-28"]}> {`${title}`} </Text>
 
+          <View style={...categoriasStyles.mainContainer}>
+          
+          </View>
+        </View>
+      </ScrollView>
+    </View>
+  );
+};
+ 
+export default CategoryPreviewScreen;
