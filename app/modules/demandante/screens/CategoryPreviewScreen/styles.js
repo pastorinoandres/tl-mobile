@@ -3,6 +3,7 @@ import { colors, ui } from "../../../../shared/styles";
 
 export default categoriasStyles = StyleSheet.create({  
     container: {
+      flex:1,
        width: "100%",
        justifyContent: "flex-start",
        alignItems: "center",
@@ -13,23 +14,33 @@ export default categoriasStyles = StyleSheet.create({
        height: 250,
        borderRadius: 10,
      },
-    //  catTitle: {
-    //    textAlignVertical: "top",
-    //    position: "absolute",
-    //    color: colors.white(0.95),
-    //    paddingLeft: ui.padding + ui.borderRadius.borderRadius / 2,
-    //  },
+      catTitle: {
+        paddingTop: ui.padding,
+        textAlignVertical: "top",
+        position: "absolute",
+         color: colors.black(0.7),
+        paddingLeft: ui.padding + ui.borderRadius.borderRadius / 2,
+      },
      degradado: {
        position: "absolute",
        width: "100%",
        height: "100%",
      },
      spaceInitial: {
+       backgroundColor: "red",
        marginTop: ui.margin,
        marginLeft: ui.padding,
      },
      mainContainer: {
        marginTop: ui.padding,
+     },
+     catText:{
+      textAlign: "left", 
+      marginLeft: ui.margin,
+       marginBottom: ui.margin,
+     },
+     scrollView: {
+      width:"100%"
      },
      
 })

@@ -1,6 +1,6 @@
 import { images } from "../utils/images";
 
-export default users = [
+const users = [
     {
         name: "Juan",
         skill: "Albañil",
@@ -122,16 +122,7 @@ export default users = [
         isWorker:true,
         aboutMe:"Amplia experiencia en limpieza domiciliaria y comercial.",
     },
-    {/*
-        name:"",
-        skill:"",
-        image:images.,
-        state:,
-        isWorker:true,
-        aboutMe:"",*/
-    },
-   
     
-
-
+   
 ];
+export default users;

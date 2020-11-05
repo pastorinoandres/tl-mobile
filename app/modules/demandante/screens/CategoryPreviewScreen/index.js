@@ -2,37 +2,41 @@ import React from "react";
 import { View, Image, ScrollView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import ContactsCard from "../ContactsScreen/ContactsCard";
-import { colors, typography, } from "../../../../shared/styles";
+import { colors, typography, ui } from "../../../../shared/styles";
 import categoriasStyles from "./styles";
 import { Text } from "./../../../../shared/components/atoms";
-//import users from "../../../../mocks/users";
+import users from "../../../../mocks/users";
 
 const CategoryPreviewScreen = (props) => {
   const { image, title, subtitle } = props.route.params
   
-  const styles ={
-    catTitle: {
-      textAlignVertical: "top",
-      position: "absolute",
-      paddingTop: ui.padding,
-      color: colors.black(0.7),
-      paddingLeft: ui.padding + ui.borderRadius.borderRadius / 2,
-      textAlign: "left",
-    },
-  }
+  const recomendados = users.filter(user => user.skill === title);
 
+  const ListaRecomendados = ({lista}) => {
+    return lista.map(recomendado => {
+      const contact = {
+        name: recomendado.name,
+        skill: recomendado.skill,
+        photo: recomendado.image,
+        state: recomendado.state,
+      }
+      return <ContactsCard contact={contact} />})
+  };
+  
   return (
-    <View {...categoriasStyles.container}>
-      <ScrollView scrollEventThrottle={1}>
-        <View {...categoriasStyles.spaceInitial}>
-          <Image source={image} {...categoriasStyles.catImag}/>
-          <LinearGradient {...categoriasStyles.degradado} {...colors.greyGradient} />
-          <Text extraStyles={styles.catTitle} {...typography["title-28"]}> {`${title}`} </Text>
+    <View style={categoriasStyles.container}>
+      <ScrollView style={categoriasStyles.scrollView}>
+            
+          <Image source={image} style={categoriasStyles.catImag} />
+          <LinearGradient style={categoriasStyles.degradado} {...colors.greyGradient} />
+          <Text  {...typography["title-28"]} extraStyles={categoriasStyles.catTitle}> {`${title}`} </Text>
 
-          <View {...categoriasStyles.mainContainer}>
+          <View style={categoriasStyles.mainContainer}>
+          <Text  {...typography["title-24"]} extraStyles={categoriasStyles.catText}>{recomendados.length ? "Personal recomendado para esta categoría" : "No hay trabajadores para categoría"} </Text>
           
+          <ListaRecomendados lista={recomendados} />
           </View>
-        </View>
+        
       </ScrollView>
     </View>
   );
