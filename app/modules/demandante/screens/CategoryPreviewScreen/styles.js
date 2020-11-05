@@ -33,6 +33,7 @@ export default categoriasStyles = StyleSheet.create({
      },
      mainContainer: {
        marginTop: ui.padding,
+       marginBottom: 50 + ui.margin,
      },
      catText:{
       textAlign: "left", 
