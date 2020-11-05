@@ -2,7 +2,7 @@ import React from "react";
 import { View, Image, ScrollView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import ContactsCard from "../ContactsScreen/ContactsCard";
-import { colors, typography, ui } from "../../../../shared/styles";
+import { colors, typography } from "../../../../shared/styles";
 import categoriasStyles from "./styles";
 import { Text } from "./../../../../shared/components/atoms";
 import users from "../../../../mocks/users";
@@ -19,6 +19,7 @@ const CategoryPreviewScreen = (props) => {
         skill: recomendado.skill,
         photo: recomendado.image,
         state: recomendado.state,
+        aboutMe: recomendado.aboutMe,
       }
       return <ContactsCard contact={contact} />})
   };
