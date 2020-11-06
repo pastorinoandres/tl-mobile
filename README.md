@@ -6,7 +6,7 @@ Desarrollo de la plataforma móvil usando las librerias de:
 * Redux
 * Redux Saga
 * Firebase
-* otras..
+* otras...
 
 ## Instalación
 `npm install` para instalar todas las dependencias.
