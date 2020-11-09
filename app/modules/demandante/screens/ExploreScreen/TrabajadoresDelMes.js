@@ -15,19 +15,19 @@ const TrabajadoresDelMes = () => {
   const navigation = useNavigation();
   const trabajadores = [
     {
-      image: images.trabajadores_a,
+      photo: images.trabajadores_a,
       name: "Juan",
       skill: "Albañil",
       aboutMe: "Soy albañil y me dedico a la construcción pesada.",
     },
     {
-      image: images.trabajadores_b,
+      photo: images.trabajadores_b,
       name: "Maria",
       skill: "Electricista",
       aboutMe: "Me dedico a realizar instalaciones domiciliarias como comerciales.",
     },
     {
-      image: images.trabajadores_c,
+      photo: images.trabajadores_c,
       name: "Sebastian",
       skill: "Herrero",
       aboutMe: "Realizo cualquier estructura de metálica usted necesite.",
@@ -108,7 +108,7 @@ const TrabajadoresDelMes = () => {
                 style={styles.touchable}
                 onPress={openProfile(item)}
               >
-                <Image source={item.image} style={styles.image} />
+                <Image source={item.photo} style={styles.image} />
                 <View style={styles.cardFooter}>
                   <Text
                     {...typography["body-strong-16"]}

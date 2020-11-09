@@ -85,7 +85,7 @@ const ProfileScreen = (props) => {
     route: { params },
   } = props;
 
-  const { image, name, skill, aboutMe } = params;
+  const { photo, name, skill, aboutMe } = params;
 
   const insets = useSafeAreaInsets();
 
@@ -127,7 +127,7 @@ const ProfileScreen = (props) => {
 
   return (
     <View style={styles.container}>
-      <Image source={image} style={styles.portada} />
+      <Image source={photo} style={styles.portada} />
       <Text
         {...typography["title-28"]}
         color={colors.white(1)}
@@ -135,7 +135,7 @@ const ProfileScreen = (props) => {
       >
         {name}
       </Text>
-      <Image source={image} style={styles.photo} />
+      <Image source={photo} style={styles.photo} />
       <Text
         {...typography["body-16"]}
         color={colors.grey.t60}
