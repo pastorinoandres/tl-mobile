@@ -6,11 +6,39 @@ import { PROFILE } from "../../../../navigation/constants";
 import { useNavigation } from "../../../../hooks";
 import {images} from "../../../../utils/images"; 
 
+
 const CategoryPreviewCard = ({contact}) =>{
 
     const navigation = useNavigation();
     const styles = {
-
+        circle1:{
+            width:30, 
+            height:30, 
+            backgroundColor:'rgb(22, 189, 47)', 
+            borderRadius:100,
+            paddingVertical: 5,
+        },
+        circle2:{
+            width:30, 
+            height:30, 
+            backgroundColor:'rgb(255, 0, 0)', 
+            borderRadius:100,
+            paddingVertical: 5,
+        },
+        circle3:{
+            width:30, 
+            height:30, 
+            backgroundColor:'rgb(255, 255, 0)', 
+            borderRadius:100,
+            paddingVertical: 5,
+        },
+        circle4:{
+            width:30, 
+            height:30, 
+            backgroundColor:'rgb(125, 255, 0)', 
+            borderRadius:100,
+            paddingVertical: 5,
+        },
         cardContainer:{
             paddingHorizontal:ui.padding,
             marginBottom:ui.margin,
@@ -37,7 +65,30 @@ const CategoryPreviewCard = ({contact}) =>{
         return () => {
           navigation.navigate(PROFILE, contact);
         };
-      };
+    };
+
+    const backColor = (color) =>{
+        if ( color > 0 && color < 2.5) {
+            return <Text {...typography["body-strong-16"]} color={colors.white(1)} 
+            extraStyles={styles.circle2}
+            >{contact.qualification}</Text>
+        }   else if(color >2.5 && color < 5){
+            return <Text {...typography["body-strong-16"]} color={colors.white(1)} 
+            extraStyles={styles.circle3}
+            >{contact.qualification}</Text>
+        }   else if(color > 5 && color > 7.5 ){
+            return <Text {...typography["body-strong-16"]} color={colors.white(1)} 
+            extraStyles={styles.circle4}
+            >{contact.qualification}</Text>
+        }   else if(color > 7.5 ){
+            return <Text {...typography["body-strong-16"]} color={colors.white(1)} 
+            extraStyles={styles.circle1}
+            >{contact.qualification}</Text>
+        } 
+        else if(color == 0) {
+            return <Text {...typography["body-strong-16"]} color={colors.grey.t80}>S/ Calificar aun</Text>
+        }
+    };
 
     return(
 
@@ -50,16 +101,19 @@ const CategoryPreviewCard = ({contact}) =>{
                     </View>
                     <View style={{flex: 1, flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', backgroundColor: 'transparent'}}>
                         <Text {...typography["body-strong-18"]} color={colors.grey.t80} extraStyles={{textAlign:'left', marginBottom: ui.padding*0.3}} >{contact.name}</Text>
-                        <View style={{flexDirection: 'row'}}>    
-                            <Thumbnail source={images.marker} size={20} />
-                            <Text {...typography["body-16 "]} color={colors.grey.t80}  >{contact.city}</Text>
-                        </View>
-                        <View style={{flexDirection:'row', alignSelf:'flex-end', marginRight:ui.margin}}>
-                                {contact.qualification  ? 
-                                    <Text {...typography["body-strong-16"]} color={colors.grey.t80} >{contact.qualification}</Text>
-                                    : <Text>s/ calificar</Text>
-                                }
-                        </View>
+                           
+                            <View style={{ flexDirection: 'row'}}>
+                                <Thumbnail source={images.marker} size={20} />
+                                <Text {...typography["body-16 "]} color={colors.grey.t80}  >{contact.city}</Text>
+                                <Text {...typography["body-16 "]} color={colors.grey.t80}  >{"  " + contact.distance + " Km" }</Text>
+                            </View>
+                            <View style={{alignSelf:'center',marginLeft:ui.margin*10}}>
+                                {backColor(contact.qualification)}
+                                
+                            </View>
+                            
+                        
+                        
                     </View>
                     
                 </View>
