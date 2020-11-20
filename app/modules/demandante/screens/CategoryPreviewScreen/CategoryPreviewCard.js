@@ -11,28 +11,28 @@ const CategoryPreviewCard = ({contact}) =>{
 
     const navigation = useNavigation();
     const styles = {
-        circle1:{
+        verde:{
             width:30, 
             height:30, 
             backgroundColor:'rgb(22, 189, 47)', 
             borderRadius:100,
             paddingVertical: 5,
         },
-        circle2:{
+        rojo:{
             width:30, 
             height:30, 
             backgroundColor:'rgb(255, 0, 0)', 
             borderRadius:100,
             paddingVertical: 5,
         },
-        circle3:{
+        naranja:{
             width:30, 
             height:30, 
-            backgroundColor:'rgb(255, 255, 0)', 
+            backgroundColor:'rgb(255, 205, 0)', 
             borderRadius:100,
             paddingVertical: 5,
         },
-        circle4:{
+        amaVerde:{
             width:30, 
             height:30, 
             backgroundColor:'rgb(125, 255, 0)', 
@@ -68,26 +68,26 @@ const CategoryPreviewCard = ({contact}) =>{
     };
 
     const backColor = (color) =>{
-        if ( color > 0 && color < 2.5) {
-            return <Text {...typography["body-strong-16"]} color={colors.white(1)} 
-            extraStyles={styles.circle2}
-            >{contact.qualification}</Text>
-        }   else if(color >2.5 && color < 5){
-            return <Text {...typography["body-strong-16"]} color={colors.white(1)} 
-            extraStyles={styles.circle3}
-            >{contact.qualification}</Text>
-        }   else if(color > 5 && color > 7.5 ){
-            return <Text {...typography["body-strong-16"]} color={colors.white(1)} 
-            extraStyles={styles.circle4}
-            >{contact.qualification}</Text>
-        }   else if(color > 7.5 ){
-            return <Text {...typography["body-strong-16"]} color={colors.white(1)} 
-            extraStyles={styles.circle1}
-            >{contact.qualification}</Text>
+        if(color == 0){
+                return <Text {...typography["body-strong-16"]} color={colors.grey.t80}>S/ Calificar aun</Text>    
+            }else if ( color > 0 && color <= 2.5) {
+                return <Text {...typography["body-strong-16"]} color={colors.white(1)} 
+                extraStyles={styles.rojo}
+                >{contact.qualification}</Text>
+        }   else if(color > 2.5 && color <= 5){
+                return <Text {...typography["body-strong-16"]} color={colors.white(1)} 
+                extraStyles={styles.naranja}
+                >{contact.qualification}</Text>
+        }   else if(color > 5 && color <= 7.5 ){
+                return <Text {...typography["body-strong-16"]} color={colors.white(1)} 
+                extraStyles={styles.amaVerde}
+                >{contact.qualification}</Text>
+        }   else {
+                return <Text {...typography["body-strong-16"]} color={colors.white(1)} 
+                extraStyles={styles.verde}
+                >{contact.qualification}</Text>
         } 
-        else if(color == 0) {
-            return <Text {...typography["body-strong-16"]} color={colors.grey.t80}>S/ Calificar aun</Text>
-        }
+        
     };
 
     return(

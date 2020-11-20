@@ -20,7 +20,7 @@ const users = [
         isWorker:true,
         aboutMe: "Me dedico a realizar instalaciones domiciliarias como comerciales.",
         city:"Ensenada",
-        qualification:9,
+        qualification:5,
         distance:10.1,
       },
       {
@@ -65,7 +65,7 @@ const users = [
         isWorker:true,
         aboutMe:"Cuento con varios años de experiencia en electricidad profesional en Edelap.",
         city:"Berisso",
-        qualification:10,
+        qualification:1.5,
         distance:12,
     },
     {
