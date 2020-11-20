@@ -8,6 +8,9 @@ const users = [
         state:true,
         isWorker:true,
         aboutMe: "Soy albañil y me dedico a la construcción pesada.",
+        city:"La Plata",
+        qualification:7,
+        distance:3.1,
       },
       {
         name: "Maria",
@@ -16,6 +19,9 @@ const users = [
         state:true,
         isWorker:true,
         aboutMe: "Me dedico a realizar instalaciones domiciliarias como comerciales.",
+        city:"Ensenada",
+        qualification:9,
+        distance:10.1,
       },
       {
         name: "Sebastian",
@@ -24,6 +30,9 @@ const users = [
         state:true,
         isWorker:true,
         aboutMe: "Realizo cualquier estructura de metálica usted necesite.",
+        city:"Berisso",
+        qualification:5,
+        distance:7.1,
       },
     {
         name:"Andres Pastorino",
@@ -32,6 +41,9 @@ const users = [
         state:true,
         isWorker:true,
         aboutMe:"Tengo basta experiencia tanto en electricidad domiciliaria, comercial y del automovil.",
+        city:"La Plata",
+        qualification:8,
+        distance:4,
     },
     {
         name:"Andres Pastorino",
@@ -40,6 +52,9 @@ const users = [
         state:false,
         isWorker:true,
         aboutMe:"Realizo servicios de emergencia domicialiaria, inclusive fines de semana.",
+        city:"La Plata",
+        qualification:3,
+        distance:4,
     },
 
     {
@@ -49,6 +64,9 @@ const users = [
         state:false,
         isWorker:true,
         aboutMe:"Cuento con varios años de experiencia en electricidad profesional en Edelap.",
+        city:"Berisso",
+        qualification:10,
+        distance:12,
     },
     {
         name:"Mariano Busti",
@@ -57,6 +75,9 @@ const users = [
         state:true,
         isWorker:true,
         aboutMe:"Basta experiencia en control de plagas y prevencion, tanto domiciliaria como comercial.",
+        city:"Berisso",
+        qualification:4,
+        distance:12,
     },
     {
         name:"Marcelo Ponti",
@@ -65,6 +86,9 @@ const users = [
         state:true,
         isWorker:true,
         aboutMe:"Realizo trabajos profesionales de reparacion, elaboracion de cualquier tipo de estructura.",
+        city:"Ensenada",
+        qualification:2,
+        distance:20,
     },
     {
         name:"Marcelo Ponti",
@@ -73,6 +97,9 @@ const users = [
         state:false,
         isWorker:true,
         aboutMe:"Determinación y control de sistemas parcelarios, evaluacion de propiedades inmueble pública o privada, urbana y rural.",
+        city:"Ensenada",
+        qualification:8,
+        distance:20,
     },
     {
         name:"Alejandro DiLuca",
@@ -81,6 +108,9 @@ const users = [
         state:false,
         isWorker:true,
         aboutMe:"Servicios de metalurgia en general, herreria, forjado, elaboracion y reparaciones de emergencia domiciliaria - comercial.",
+        city:"City Bell",
+        qualification:9.5,
+        distance:15,
     },
     {
         name:"Alejandro DiLuca",
@@ -89,6 +119,9 @@ const users = [
         state:true,
         isWorker:true,
         aboutMe:"Servicios de emergencia domicialiaria, comercial y del automovil.",
+        city:"City Bell",
+        qualification:5.5,
+        distance:15,
     },
     {
         name:"Nicolas Perazzo",
@@ -97,6 +130,9 @@ const users = [
         state:true,
         isWorker:true,
         aboutMe:"Construcciones domiciliarias y comerciales en general, servicio de destape y desagote.",
+        city:"Villa Elisa",
+        qualification:5,
+        distance:40,
     },
     {
         name:"Nicolas Perazzo",
@@ -105,6 +141,9 @@ const users = [
         state:false,
         isWorker:true,
         aboutMe:"Experto en paisajismo, jardineria natural y semi natural domiciliaria.",
+        city:"Villa Elisa",
+        qualification:3,
+        distance:40,
     },
     {
         name:"Damian Grimberg",
@@ -113,6 +152,9 @@ const users = [
         state:false,
         isWorker:true,
         aboutMe:"Servicio de destape, desagote, elaboracion y arreglos en general.",
+        city:"Berazategui",
+        qualification:0,
+        distance:25,
     },
     {
         name:"Damian Grimberg",
@@ -121,6 +163,9 @@ const users = [
         state:true,
         isWorker:true,
         aboutMe:"Amplia experiencia en limpieza domiciliaria y comercial.",
+        city:"Berazategui",
+        qualification:7,
+        distance:25,
     },
     
    
