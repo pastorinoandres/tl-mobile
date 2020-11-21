@@ -9,7 +9,10 @@ import {
 } from "react-native";
 import { colors, ui, calculateSize } from "../../../../shared/styles";
 import Text from "../../../../shared/components/atoms/Text";
-import { CardWithTitle, DataWorker } from "../../../../shared/components/molecules";
+import {
+  CardWithTitle,
+  DataWorker,
+} from "../../../../shared/components/molecules";
 import { Screen } from "../../../../shared/components/organisms";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Settings, ChangeMode } from "../../../../shared/vectors";
@@ -19,22 +22,23 @@ import { images } from "./../../../../utils/images";
 import typography from "./../../../../shared/styles/typography";
 import { Value } from "react-native-reanimated";
 import { getRepTextAndColor } from "./utils/getRepTextAndColor";
-import { Place, Skill} from "../../../../shared/vectors";
-
-
+import { Place, Skill } from "../../../../shared/vectors";
+import * as Linking from "expo-linking";
 
 const Item = ({ icon, name, action }) => {
   return (
     <TouchableWithoutFeedback onPress={action}>
-      <View style={{
+      <View
+        style={{
           alignItems: "center",
-      }}>
+        }}
+      >
         <View
           style={{
             height: 60,
             width: 60,
             justifyContent: "center",
-            alignItems: "center",          
+            alignItems: "center",
             marginBottom: ui.margin,
           }}
         >
@@ -51,49 +55,11 @@ const Item = ({ icon, name, action }) => {
 const ProfileScreen = (props) => {
   const { login, logout } = useActions("login", "logout");
 
-  const options = [
-    {
-      name: "Demandar al trabajador",
-      Icon: ChangeMode,
-      action: () => Alert.alert("hiciste click en la option"),
-    },
-    {
-      name: "Configuración de la app",
-      Icon: Settings,
-      action: () => Alert.alert("hiciste click en la option"),
-    },
-    {
-      name: "Importar contactos del celular",
-      Icon: Contacts,
-      action: () => Alert.alert("hiciste click en la option"),
-    },
-  ];
-
-  const medios = [
-    {
-      name: "WHATSAPP",
-      Icon: images.icon_whatsapp,
-      action: () => Alert.alert("Accediendo a Whatsapp"),
-    },
-    {
-      name: "SMS",
-      Icon: images.icon_sms,
-      action: () => Alert.alert("Accediendo a envío de SMS"),
-    },
-    {
-      name: "LLAMADA",
-      Icon: images.icon_telefono,
-      action: () => Alert.alert("Accediendo a realizar llamada"),
-    },
-  ];
-
   const {
     route: { params },
   } = props;
 
-  const { image, name, skill, aboutMe, reputation, city } = params;
-
-  const insets = useSafeAreaInsets();
+  const { image, name, skill, aboutMe, reputation, city, mobile } = params;
 
   const styles = {
     container: {
@@ -101,7 +67,7 @@ const ProfileScreen = (props) => {
       width: "100%",
       justifyContent: "flex-start",
       alignItems: "center",
-      backgroundColor: colors.backgroundGrey.primary,       
+      backgroundColor: colors.backgroundGrey.primary,
     },
     containerCards: {
       width: "100%",
@@ -125,21 +91,21 @@ const ProfileScreen = (props) => {
       overflow: "hidden",
       borderRadius: 80,
     },
-    line:{
+    line: {
       flexDirection: "row",
       width: "100%",
-      marginVertical: ui.padding/3,
+      marginVertical: ui.padding / 3,
       alignItems: "center",
     },
-    iconCircle:{
+    iconCircle: {
       width: 40,
       height: 40,
       borderRadius: 20,
       marginRight: 20,
       justifyContent: "center",
-      alignItems: "center",      
+      alignItems: "center",
     },
-    textIcon:{
+    textIcon: {
       color: colors.white(1),
     },
     text: {
@@ -156,43 +122,82 @@ const ProfileScreen = (props) => {
     subtitles: {
       position: "relative",
       top: -40,
-      textAlign: "left",      
+      textAlign: "left",
     },
-    scrollView: {            
+    scrollView: {
       width: "100%",
-      top: -40,      
+      top: -40,
       position: "relative",
-      
-    }
-    
+    },
   };
 
-  
-  const {descripcion, color} = getRepTextAndColor(reputation);
+  const { descripcion, color } = getRepTextAndColor(reputation);
 
-  const dataWorkerList = [ {
-    text: descripcion,
-    icon: {
-      isIcon:false,
-      content:reputation,
-      color,
-    }
-  },{
-    text: `Vive en ${city}`,
-    icon: {
-      isIcon:true,
-      content:Place,
-      color:colors.grey.t60,
-    }
-  },{
-    text: `Trabaja en ${skill}`,
-    icon: {
-      isIcon:true,
-      content:Skill,
-      color:colors.grey.t60,
-    }
-  } ]
+  const dataWorkerList = [
+    {
+      text: descripcion,
+      icon: {
+        isIcon: false,
+        content: reputation,
+        color,
+      },
+    },
+    {
+      text: `Vive en ${city}`,
+      icon: {
+        isIcon: true,
+        content: Place,
+        color: colors.grey.t60,
+      },
+    },
+    {
+      text: `Trabaja en ${skill}`,
+      icon: {
+        isIcon: true,
+        content: Skill,
+        color: colors.grey.t60,
+      },
+    },
+  ];
 
+  const openDeepLink = (url) => {
+    Linking.openURL(url);
+  };
+  const options = [
+    {
+      name: "Demandar al trabajador",
+      Icon: ChangeMode,
+      action: () => Alert.alert("hiciste click en la option"),
+    },
+    {
+      name: "Configuración de la app",
+      Icon: Settings,
+      action: () => Alert.alert("hiciste click en la option"),
+    },
+    {
+      name: "Importar contactos del celular",
+      Icon: Contacts,
+      action: () => Alert.alert("hiciste click en la option"),
+    },
+  ];
+
+  const medios = [
+    {
+      name: "WHATSAPP",
+      Icon: images.icon_whatsapp,
+      action: () => openDeepLink(`https://wa.me/${mobile}`),
+    },
+    {
+      name: "SMS",
+      Icon: images.icon_sms,
+      action: () => Alert.alert("Accediendo a envío de SMS"),
+    },
+    {
+      name: "LLAMADA",
+      Icon: images.icon_telefono,
+      action: () => Alert.alert("Accediendo a realizar llamada"),
+    },
+  ];
 
   return (
     <View style={styles.container}>
@@ -203,42 +208,47 @@ const ProfileScreen = (props) => {
         color={colors.grey.t80}
         extraStyles={styles.description}
       >
-       {name}
+        {name}
       </Text>
       <View style={styles.containerCards}>
-
-      <ScrollView style={styles.scrollView}>
-      
-      
-      <CardWithTitle title="Datos del Trabajador">
-        {dataWorkerList.map((element, index) => {
-        const {text,icon:{isIcon, content:Content, color}} = element;
-          return (
-            <View key={index+text} style={styles.line}> 
-              <View style={{...styles.iconCircle, backgroundColor:color}}>
-                {isIcon ?(<Content/>):<Text extraStyles={styles.textIcon}>{Content}</Text>}
-              </View>                
-              <Text>{text}</Text>
-            </View>)
-        })}
-      </CardWithTitle>
-      <CardWithTitle title="Medios de Contacto">
-      <View
-        style={{
-          flexDirection: "row",
-          width: "100%",
-          justifyContent: "space-around",
-          paddingHorizontal: ui.margin * 2,
-        }}
-      >
-        {medios.map(({ name, Icon, action }) => (
-          <Item key={name} name={name} icon={Icon} action={action} />
-        ))}
-        
-      </View>
-      </CardWithTitle>
-
-      </ScrollView>
+        <ScrollView style={styles.scrollView}>
+          <CardWithTitle title="Datos del Trabajador">
+            {dataWorkerList.map((element, index) => {
+              const {
+                text,
+                icon: { isIcon, content: Content, color },
+              } = element;
+              return (
+                <View key={index + text} style={styles.line}>
+                  <View
+                    style={{ ...styles.iconCircle, backgroundColor: color }}
+                  >
+                    {isIcon ? (
+                      <Content />
+                    ) : (
+                      <Text extraStyles={styles.textIcon}>{Content}</Text>
+                    )}
+                  </View>
+                  <Text>{text}</Text>
+                </View>
+              );
+            })}
+          </CardWithTitle>
+          <CardWithTitle title="Medios de Contacto">
+            <View
+              style={{
+                flexDirection: "row",
+                width: "100%",
+                justifyContent: "space-around",
+                paddingHorizontal: ui.margin * 2,
+              }}
+            >
+              {medios.map(({ name, Icon, action }) => (
+                <Item key={name} name={name} icon={Icon} action={action} />
+              ))}
+            </View>
+          </CardWithTitle>
+        </ScrollView>
       </View>
     </View>
   );
