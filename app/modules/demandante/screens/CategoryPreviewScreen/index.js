@@ -1,11 +1,12 @@
 import React from "react";
 import { View, Image, ScrollView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import ContactsCard from "../ContactsScreen/ContactsCard";
 import { colors, typography } from "../../../../shared/styles";
 import categoriasStyles from "./styles";
 import { Text } from "./../../../../shared/components/atoms";
 import users from "../../../../mocks/users";
+import CategoryPreviewCard from "./CategoryPreviewCard";
+import skill from "../../../../shared/vectors/skill";
 
 const CategoryPreviewScreen = (props) => {
   const { image, title, subtitle } = props.route.params;
@@ -17,11 +18,14 @@ const CategoryPreviewScreen = (props) => {
       const contact = {
         name: recomendado.name,
         skill: recomendado.skill,
-        photo: recomendado.image,
+        image: recomendado.image,
         state: recomendado.state,
         aboutMe: recomendado.aboutMe,
+        city: recomendado.city,
+        reputation: recomendado.reputation,
+        distance: recomendado.distance,
       };
-      return <ContactsCard contact={contact} />;
+      return <CategoryPreviewCard contact={contact} key={contact.name+contact.skill} />;
     });
   };
 
@@ -43,11 +47,11 @@ const CategoryPreviewScreen = (props) => {
 
         <View style={categoriasStyles.mainContainer}>
           <Text
-            {...typography["title-24"]}
+            {...typography["title-20"]}
             extraStyles={categoriasStyles.catText}
           >
             {recomendados.length
-              ? "Personal recomendado para esta categoría"
+              ? "Personal Sugerido"
               : "No hay trabajadores para categoría"}{" "}
           </Text>
 

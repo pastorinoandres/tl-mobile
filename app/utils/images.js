@@ -41,4 +41,5 @@ export const images = {
   flagDefault: require(`${url}/flagdefault.png`),
   portada: require(`${url}/portada.png`),
   icon: require(`${url}/icon.png`),
+  marker: require(`${url}/iconos/marker.png`),
 };

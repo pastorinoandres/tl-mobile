@@ -8,11 +8,13 @@ export default categoriasStyles = StyleSheet.create({
        justifyContent: "flex-start",
        alignItems: "center",
        backgroundColor: colors.backgroundGrey.primary,
+       marginTop:ui.margin,
      },
      catImag: {
-       width: "100%",
+       alignSelf: 'center',
+       width: "95%",
        height: 250,
-       borderRadius: 10,
+       borderRadius: 5,
      },
       catTitle: {
         paddingTop: ui.padding,
