@@ -17,11 +17,11 @@ const CategoryPreviewScreen = (props) => {
       const contact = {
         name: recomendado.name,
         skill: recomendado.skill,
-        photo: recomendado.image,
+        image: recomendado.image,
         state: recomendado.state,
         aboutMe: recomendado.aboutMe,
         city: recomendado.city,
-        qualification: recomendado.reputation,
+        reputation: recomendado.reputation,
         distance: recomendado.distance,
       };
       return <CategoryPreviewCard contact={contact} />;

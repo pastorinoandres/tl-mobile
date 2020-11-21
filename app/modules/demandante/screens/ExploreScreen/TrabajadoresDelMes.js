@@ -10,29 +10,11 @@ import {
 import { useNavigation } from "../../../../hooks";
 import { PROFILE } from "../../../../navigation/constants";
 import { images } from "./../../../../utils/images";
+import users from "./../../../../mocks/users";
 
 const TrabajadoresDelMes = () => {
   const navigation = useNavigation();
-  const trabajadores = [
-    {
-      photo: images.trabajadores_a,
-      name: "Juan",
-      skill: "Albañil",
-      aboutMe: "Soy albañil y me dedico a la construcción pesada.",
-    },
-    {
-      photo: images.trabajadores_b,
-      name: "Maria",
-      skill: "Electricista",
-      aboutMe: "Me dedico a realizar instalaciones domiciliarias como comerciales.",
-    },
-    {
-      photo: images.trabajadores_c,
-      name: "Sebastian",
-      skill: "Herrero",
-      aboutMe: "Realizo cualquier estructura de metálica usted necesite.",
-    },
-  ];
+  const trabajadores = users.filter((user) => user.workerOfMonth);
 
   const styles = {
     mainContainer: {
@@ -108,7 +90,7 @@ const TrabajadoresDelMes = () => {
                 style={styles.touchable}
                 onPress={openProfile(item)}
               >
-                <Image source={item.photo} style={styles.image} />
+                <Image source={item.image} style={styles.image} />
                 <View style={styles.cardFooter}>
                   <Text
                     {...typography["body-strong-16"]}
