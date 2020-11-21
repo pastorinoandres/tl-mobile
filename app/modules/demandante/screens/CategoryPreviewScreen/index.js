@@ -6,6 +6,7 @@ import categoriasStyles from "./styles";
 import { Text } from "./../../../../shared/components/atoms";
 import users from "../../../../mocks/users";
 import CategoryPreviewCard from "./CategoryPreviewCard";
+import skill from "../../../../shared/vectors/skill";
 
 const CategoryPreviewScreen = (props) => {
   const { image, title, subtitle } = props.route.params;
@@ -24,7 +25,7 @@ const CategoryPreviewScreen = (props) => {
         reputation: recomendado.reputation,
         distance: recomendado.distance,
       };
-      return <CategoryPreviewCard contact={contact} />;
+      return <CategoryPreviewCard contact={contact} key={contact.name+contact.skill} />;
     });
   };
 
