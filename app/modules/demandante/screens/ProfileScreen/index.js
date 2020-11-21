@@ -185,7 +185,10 @@ const ProfileScreen = (props) => {
     {
       name: "WHATSAPP",
       Icon: images.icon_whatsapp,
-      action: () => openDeepLink(`https://wa.me/${mobile}`),
+      action: () =>
+        openDeepLink(
+          `https://wa.me/${mobile}?text=Hola%20te%20vi%20por%20TuLaburo!`
+        ),
     },
     {
       name: "SMS",
