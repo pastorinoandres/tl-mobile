@@ -9,7 +9,7 @@ const users = [
         isWorker:true,
         aboutMe: "Soy albañil y me dedico a la construcción pesada.",
         city:"La Plata",
-        qualification:7,
+        reputation:7,
         distance:3.1,
       },
       {
@@ -20,7 +20,7 @@ const users = [
         isWorker:true,
         aboutMe: "Me dedico a realizar instalaciones domiciliarias como comerciales.",
         city:"Ensenada",
-        qualification:5,
+        reputation:5,
         distance:10.1,
       },
       {
@@ -31,7 +31,7 @@ const users = [
         isWorker:true,
         aboutMe: "Realizo cualquier estructura de metálica usted necesite.",
         city:"Berisso",
-        qualification:5,
+        reputation:5,
         distance:7.1,
       },
     {
@@ -42,7 +42,7 @@ const users = [
         isWorker:true,
         aboutMe:"Tengo basta experiencia tanto en electricidad domiciliaria, comercial y del automovil.",
         city:"La Plata",
-        qualification:8,
+        reputation:8,
         distance:4,
     },
     {
@@ -53,7 +53,7 @@ const users = [
         isWorker:true,
         aboutMe:"Realizo servicios de emergencia domicialiaria, inclusive fines de semana.",
         city:"La Plata",
-        qualification:3,
+        reputation:3,
         distance:4,
     },
 
@@ -65,7 +65,7 @@ const users = [
         isWorker:true,
         aboutMe:"Cuento con varios años de experiencia en electricidad profesional en Edelap.",
         city:"Berisso",
-        qualification:1.5,
+        reputation:1.5,
         distance:12,
     },
     {
@@ -76,7 +76,7 @@ const users = [
         isWorker:true,
         aboutMe:"Basta experiencia en control de plagas y prevencion, tanto domiciliaria como comercial.",
         city:"Berisso",
-        qualification:4,
+        reputation:4,
         distance:12,
     },
     {
@@ -87,7 +87,7 @@ const users = [
         isWorker:true,
         aboutMe:"Realizo trabajos profesionales de reparacion, elaboracion de cualquier tipo de estructura.",
         city:"Ensenada",
-        qualification:2,
+        reputation:2,
         distance:20,
     },
     {
@@ -98,7 +98,7 @@ const users = [
         isWorker:true,
         aboutMe:"Determinación y control de sistemas parcelarios, evaluacion de propiedades inmueble pública o privada, urbana y rural.",
         city:"Ensenada",
-        qualification:8,
+        reputation:8,
         distance:20,
     },
     {
@@ -109,7 +109,7 @@ const users = [
         isWorker:true,
         aboutMe:"Servicios de metalurgia en general, herreria, forjado, elaboracion y reparaciones de emergencia domiciliaria - comercial.",
         city:"City Bell",
-        qualification:9.5,
+        reputation:9.5,
         distance:15,
     },
     {
@@ -120,7 +120,7 @@ const users = [
         isWorker:true,
         aboutMe:"Servicios de emergencia domicialiaria, comercial y del automovil.",
         city:"City Bell",
-        qualification:5.5,
+        reputation:5.5,
         distance:15,
     },
     {
@@ -131,7 +131,7 @@ const users = [
         isWorker:true,
         aboutMe:"Construcciones domiciliarias y comerciales en general, servicio de destape y desagote.",
         city:"Villa Elisa",
-        qualification:5,
+        reputation:5,
         distance:40,
     },
     {
@@ -142,7 +142,7 @@ const users = [
         isWorker:true,
         aboutMe:"Experto en paisajismo, jardineria natural y semi natural domiciliaria.",
         city:"Villa Elisa",
-        qualification:3,
+        reputation:3,
         distance:40,
     },
     {
@@ -153,7 +153,7 @@ const users = [
         isWorker:true,
         aboutMe:"Servicio de destape, desagote, elaboracion y arreglos en general.",
         city:"Berazategui",
-        qualification:0,
+        reputation:0,
         distance:25,
     },
     {
@@ -164,7 +164,7 @@ const users = [
         isWorker:true,
         aboutMe:"Amplia experiencia en limpieza domiciliaria y comercial.",
         city:"Berazategui",
-        qualification:7,
+        reputation:7,
         distance:25,
     },
     

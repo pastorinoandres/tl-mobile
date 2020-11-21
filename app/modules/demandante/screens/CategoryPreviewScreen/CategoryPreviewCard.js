@@ -11,10 +11,10 @@ const CategoryPreviewCard = ({contact}) =>{
 
     const navigation = useNavigation();
     const styles = {
-        verde:{
+        azul:{
             width:30, 
             height:30, 
-            backgroundColor:'rgb(22, 189, 47)', 
+            backgroundColor:'rgb(0, 100, 255)', 
             borderRadius:100,
             paddingVertical: 5,
         },
@@ -35,7 +35,7 @@ const CategoryPreviewCard = ({contact}) =>{
         amaVerde:{
             width:30, 
             height:30, 
-            backgroundColor:'rgb(125, 255, 0)', 
+            backgroundColor:'rgb(0, 255, 0)', 
             borderRadius:100,
             paddingVertical: 5,
         },
@@ -84,7 +84,7 @@ const CategoryPreviewCard = ({contact}) =>{
                 >{contact.qualification}</Text>
         }   else {
                 return <Text {...typography["body-strong-16"]} color={colors.white(1)} 
-                extraStyles={styles.verde}
+                extraStyles={styles.azul}
                 >{contact.qualification}</Text>
         } 
         
