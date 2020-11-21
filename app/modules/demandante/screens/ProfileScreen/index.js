@@ -233,7 +233,7 @@ const ProfileScreen = (props) => {
                 </View>
               );
             })}
-          </CardWithTitle>
+          </CardWithTitle> 
           <CardWithTitle title="Medios de Contacto">
             <View
               style={{
